@@ -6,7 +6,6 @@ class Solution {
             return false;
         }
 
-
         int[] first = new int[128];
         int[] second = new int[128];
         for(int i = 0; i < s.length(); i++) {
@@ -19,6 +18,42 @@ class Solution {
                 return false;
             }
         }
+
+        //HashMap Solution
+        //After running not efficient
+        // HashMap<Character,Integer> mapS = new HashMap<>();
+        // HashMap<Character,Integer> mapT = new HashMap<>();
+
+        // for(int i = 0; i < s.length(); i++) {
+        //     if(mapS.containsKey(s.charAt(i))) {
+        //         mapS.put(s.charAt(i), 1 + mapS.get(s.charAt(i)));
+        //     }
+        //     else {
+        //         mapS.put(s.charAt(i), 1);
+        //     }
+
+        //     if(mapT.containsKey(t.charAt(i))) {
+        //         mapT.put(t.charAt(i), 1 + mapT.get(t.charAt(i)));
+        //     }
+        //     else {
+        //         mapT.put(t.charAt(i), 1);
+        //     }
+
+        // }
+
+        // if(!mapS.equals(mapT)) {
+        //     return false;
+        // }
+
+        //Sorting solution
+        // char[] sArray = s.toCharArray();
+        // Arrays.sort(sArray);
+        // char[] tArray = t.toCharArray();
+        // Arrays.sort(tArray);
+        // if(!Arrays.equals(sArray,tArray)) {
+        //   return false;
+        // }
+
 
         return true;
     }
